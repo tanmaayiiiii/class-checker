@@ -2,7 +2,13 @@ import mongoose from 'mongoose';
 import express from 'express';
 import dotenv from 'dotenv';
 import axios from 'axios';
+import cors from 'cors';
 import userRoutes from './routes/class.routes.js';
+
+app.use(cors({
+  origin: "*",
+  credentials: true
+}))
 
 dotenv.config();
 const app = express();
