@@ -5,13 +5,15 @@ import axios from 'axios';
 import cors from 'cors';
 import userRoutes from './routes/class.routes.js';
 
+
+
+dotenv.config();
+const app = express();
+
 app.use(cors({
   origin: "*",
   credentials: true
 }))
-
-dotenv.config();
-const app = express();
 
 const connectDB = async () => {
     try {
